@@ -126,5 +126,16 @@ public class EventController {
             System.out.println("Ошибка обновления события!");
         }
     }
+
+    public void printHelp() {
+        System.out.println("/add"+ System.lineSeparator()+
+        "/events"+ System.lineSeparator()+
+        "/delete"+ System.lineSeparator()+
+        "/update"+ System.lineSeparator()+
+        "/findById"+ System.lineSeparator()+
+        "/findByTitle"+ System.lineSeparator()+
+        "/help"+ System.lineSeparator()+
+        "/exit");
+    }
 }
 

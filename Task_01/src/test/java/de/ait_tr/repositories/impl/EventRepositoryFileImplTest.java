@@ -184,7 +184,7 @@ class EventRepositoryFileImplTest {
             assertEquals(expected, actual);
         }
         @Test
-        public void find_event_by_incorrect_id_from_file() throws Exception {
+        public void find_event_by_incorrect_title_from_file() throws Exception {
 
             BufferedWriter writer = new BufferedWriter(new FileWriter(TEMP_EVENTS_FILE_NAME));
             writer.write(

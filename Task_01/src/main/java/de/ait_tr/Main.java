@@ -11,7 +11,7 @@ public class Main {
         EventController eventController = new EventController(scanner);
 
         boolean isRun = true;
-
+        System.out.println("/help чтобы вывести все команды");
         while (isRun) {
             String command = scanner.nextLine();
 
@@ -22,6 +22,7 @@ public class Main {
                 case "/update" -> eventController.updateEvent();
                 case "/findById" -> eventController.getEventById();
                 case "/findByTitle" -> eventController.getEventByTitle();
+                case "/help" -> eventController.printHelp();
                 default -> System.out.println("Команда не распознана!");
                 case "/exit" -> isRun = false;
             }
