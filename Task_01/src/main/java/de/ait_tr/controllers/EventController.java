@@ -64,7 +64,10 @@ public class EventController {
         System.out.println("Введите Id события для поиска:");
         String id = scanner.nextLine();
         if (IdValidator.validate(id)) {
-            printEvent(eventService.findEventByID(id));
+            EventDTO founded = eventService.findEventByID(id);
+            if (founded!=null) {
+                printEvent(founded);
+            } else System.out.println("Ничего не найдено!");
         }
     }
 
@@ -72,7 +75,10 @@ public class EventController {
         System.out.println("Введите название события для поиска:");
         String title = scanner.nextLine();
         if (TitleValidator.validate(title)) {
-            printEvent(eventService.findEventByTitle(title));
+            EventDTO founded = eventService.findEventByTitle(title);
+            if (founded!=null) {
+                printEvent(founded);
+            } else System.out.println("Ничего не найдено!");
         }
     }
 
